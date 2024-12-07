@@ -98,7 +98,6 @@ setInWindow('hardalConfig', hardalConfig, true);
 const hardalPush = createQueue('hardalQueue');
 
 const scriptUrl = data.endpoint + '/hardal';
-log(scriptUrl);
 
 // Load the Hardal script
 injectScript(scriptUrl, data.gtmOnSuccess, data.gtmOnFailure, 'hardal');
