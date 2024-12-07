@@ -1,9 +1,9 @@
-﻿___INFO___
+___INFO___
 
 {
   "type": "TAG",
   "id": "cvt_temp_public_id",
-  "version": 1.0.2.1,
+  "version": 1,
   "securityGroups": [],
   "displayName": "Hardal",
   "categories": [
