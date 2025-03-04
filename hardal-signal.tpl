@@ -73,6 +73,12 @@ ___TEMPLATE_PARAMETERS___
     "simpleValueType": true,
     "defaultValue": true,
     "help": "Fetch query params from Meta Pixel network request."
+  },
+  {
+    "type": "CHECKBOX",
+    "name": "fetchFromDataLayer",
+    "checkboxText": "Checkbox 1",
+    "simpleValueType": true
   }
 ]
 
@@ -90,6 +96,7 @@ const hardalConfig = {
     autoPageview: data.autoPageview || true,
     fetchFromGA4: data.fetchFromGA4 || true,
     fetchFromFBPixel: data.fetchFromFBPixel || true,
+    fetchFromDataLayer: data.fetchFromDataLayer || true
   }
 };
 
@@ -98,8 +105,8 @@ setInWindow('hardalConfig', hardalConfig, true);
 const hardalPush = createQueue('hardalQueue');
 
 const scriptUrl = data.endpoint + '/hardal';
+log(scriptUrl);
 
-// Load the Hardal script
 injectScript(scriptUrl, data.gtmOnSuccess, data.gtmOnFailure, 'hardal');
 
 
