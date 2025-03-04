@@ -77,7 +77,7 @@ ___TEMPLATE_PARAMETERS___
   {
     "type": "CHECKBOX",
     "name": "fetchFromDataLayer",
-    "checkboxText": "Fetch From DataLayer",
+    "checkboxText": "Fetch from dataLayer",
     "simpleValueType": true
   }
 ]
