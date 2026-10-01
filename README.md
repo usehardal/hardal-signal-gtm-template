@@ -1,16 +1,18 @@
-![Static Badge](https://img.shields.io/badge/Hardal-SDK-8A2BE2)
-
-
 <p align="center">
-  <a href="https://usehardal.com/" target="_blank">
-    <img src="https://res.cloudinary.com/hardal/image/upload/v1733595875/fkqkxwagpfukvthci9ny.svg" alt="Hardal" width="180" height="84">
+  <a href="https://usehardal.com/">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://imge.usehardal.com/cdn/logo/new/svg/o9vnmleauvr2t5xvn9xe.svg?raw=1">
+      <source media="(prefers-color-scheme: light)" srcset="https://imge.usehardal.com/cdn/logo/new/svg/yglazyhcy7kv6053lrso.svg?raw=1">
+      <img src="https://imge.usehardal.com/cdn/logo/new/svg/yglazyhcy7kv6053lrso.svg?raw=1" alt="Hardal" width="180">
+    </picture>
   </a>
 </p>
 
+![Static Badge](https://img.shields.io/badge/Hardal-SDK-8A2BE2)
 
 # Hardal Signal SDK Google Tag Manager Template
 
-Hardal is a client-side to server-side event collection enhancer designed for first-party endpoints. This Google Tag Manager template enables seamless integration of Hardal server-side capabilities into your website.
+Hardal Signal sends first-party event data from your website to a server-side endpoint. This Google Tag Manager template loads the Hardal collector and provides pageview, GA4, Meta Pixel, and data layer options.
 
 ## Features
 
@@ -39,16 +41,16 @@ Hardal is a client-side to server-side event collection enhancer designed for fi
 - **Auto Pageview**: Enable/disable automatic page view tracking (default: enabled)
 - **Fetch from Google Analytics 4**: Enable/disable GA4 integration for client/session ID and consent state (GCS) collection (default: enabled)
 - **Fetch from Meta Pixel**: Enable/disable Meta Pixel integration (default: enabled)
+- **Fetch from dataLayer**: Enable/disable data layer integration
 
 ## Usage
 
 ### Basic Setup
 
-```jsx
-javascript
-Copy
+```js
 // Initialize Hardal with basic configuration
 window.hardalConfig = {
+    endpoint: 'https://YOUR_HARDAL_ENDPOINT',
     options: {
         autoPageview: true,
         fetchFromGA4: true,
@@ -60,7 +62,7 @@ window.hardalConfig = {
 
 ### Custom Event Tracking
 
-```jsx
+```js
 
 // Track a custom event
 window.hardal.track('custom_event', {
@@ -73,7 +75,7 @@ window.hardal.track('custom_event', {
 
 ### Manual Pageview Tracking
 
-```jsx
+```js
 
 // Manually track a pageview
 window.hardal.trackPageview();
